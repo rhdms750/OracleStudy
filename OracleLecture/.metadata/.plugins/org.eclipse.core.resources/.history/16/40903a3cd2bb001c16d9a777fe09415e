@@ -1,0 +1,16 @@
+--http://www.gurubee.net/lecture/1024
+
+-- Q1. 사원테이블에서 7월에 입사한 직원 추출
+select * from sawon
+  where to_number(to_char(sahire,'MM')) = 7
+
+-- Q2. 사원테이블에서 봄에 입사한 직원 추출
+select * from sawon
+  where to_number(to_char(sahire,'MM')) in (3, 4, 5)
+  
+select * from sawon
+  where to_number(to_char(sahire,'MM')) / 3 = 1
+  
+select * from sawon
+  where to_number(to_char(sahire,'MM')) / 3 = 1
+  

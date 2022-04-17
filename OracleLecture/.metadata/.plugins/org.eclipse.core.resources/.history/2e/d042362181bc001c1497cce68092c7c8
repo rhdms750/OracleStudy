@@ -1,0 +1,12 @@
+-- 고객 테이블에서 서울에 사는 사람만 조회 
+SELECT * FROM gogek;
+SELECT * FROM gogek WHERE goaddr LIKE '서울%';
+
+-- 고객 테이블에서 서울만 떼오기
+SELECT
+  goname,
+  SUBSTR(goaddr,1,2) AS "사는 도시"
+  FROM gogek;
+  
+SELECT * FROM gogek
+  WHERE SUBSTR(goaddr,1,2) = '서울';

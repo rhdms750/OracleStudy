@@ -1,0 +1,19 @@
+참조할 사이트 : https://injun379.tistory.com/6
+
+------------------------------------------------------------------------
+오라클에서 제공하는 테스트 데이터들이 있다.
+scott계정도 테스트 계정으로 생성은 아래와 같이 할 수 있다.
+
+[1] scott계정 생성 방법
+- 1. CMD 열기
+- 2. 경로를 C:\oraclexe\app\oracle\product\10.2.0\server\RDBMS\ADMIN로 변경
+     cd C:\oraclexe\app\oracle\product\10.2.0\server\RDBMS\ADMIN
+- 3. CMD창에서 오라클 접속
+     sqlplus system/Oracle   <-- sqlplus 계정명/비번
+- 4. SQL>@scott               <-- 테스트 계정을 생성
+- 5. SQL>commit;              <-- commit; 를 하면 저장하겠다는 의미
+
+생성을 한 후에, scott계정을 사용할 수 있다.
+
+[2] scott계정 생성된 것 확인하기 
+    show user

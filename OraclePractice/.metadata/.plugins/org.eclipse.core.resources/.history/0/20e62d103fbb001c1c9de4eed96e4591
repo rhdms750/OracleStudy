@@ -1,0 +1,55 @@
+-- 원본 테이블 ) userInfo3
+create table userInfo3
+(
+    idx       int,           
+    name      varchar2(100) not null,
+    id        varchar2(100) not null unique,
+    password  varchar2(100) not null,
+    eng       int           check(eng between 0 and 100),
+    mat       int           check(mat between 0 and 100)
+)
+
+alter table userInfo3 
+  add constraint pk_userInfo3_idx primary key(idx)
+
+insert into userInfo3 values(1, '김길동', 'kim1234', '1234', 88, 100);
+insert into userInfo3 values(2, '나길동', 'nah1234', '2345', 78, 90);
+insert into userInfo3 values(3, '다길동', 'dah1234', '2345', 98, 50);
+
+select * from userInfo3
+
+-- A테이블 ) userInfoRevised1
+create table userInfoRevised1
+(
+    SID       int,           
+    name      varchar2(100) not null,
+    id        varchar2(100) not null unique,
+    password  varchar2(100) not null
+)
+
+alter table userInfoRevised1
+  add constraint pk_userInfoRevised1_SID primary key(SID)
+
+insert into userInfoRevised1 values(1001, '김길동', 'kim1234', '1234');
+insert into userInfoRevised1 values(1002, '나길동', 'nah1234', '2345');
+insert into userInfoRevised1 values(1003, '다길동', 'dah1234', '2345');
+
+select * from userInfoRevised1
+
+-- B테이블 : userInfoRevised2
+create table userInfoRevised2
+(
+    idx       int,           
+    name      varchar2(100) not null,
+    eng       int           check(eng between 0 and 100),
+    mat       int           check(mat between 0 and 100)
+)
+
+alter table userInfoRevised2
+  add constraint pk_userInfo3_idx primary key(idx)
+
+insert into userInfo3 values(1, '김길동', 'kim1234', '1234', 88, 100);
+insert into userInfo3 values(2, '나길동', 'nah1234', '2345', 78, 90);
+insert into userInfo3 values(3, '다길동', 'dah1234', '2345', 98, 50);
+
+select * from userInfo3

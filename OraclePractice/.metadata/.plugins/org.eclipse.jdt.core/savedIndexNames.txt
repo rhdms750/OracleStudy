@@ -1,0 +1,3 @@
+INDEX VERSION 1.131+C:\Work\OracleStudy\OraclePractice\.metadata\.plugins\org.eclipse.jdt.core
+1686378584.index
+88951749.index

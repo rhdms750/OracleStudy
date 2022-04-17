@@ -1,0 +1,14 @@
+/*
+
+-- 사원테이블에서 입사년도, 입사월, 입사일 별도 추출
+select 
+   sabun,saname,sahire,                 -- 기본필드
+   -- to_char(sahire,'YYYY') as 입사년도   -- 연산필드
+   to_number(to_char(sahire,'YYYY')) as 입사년도
+   to_number(to_char(sagire,'MM')) as 입사월
+from sawon
+
+
+
+*/
+

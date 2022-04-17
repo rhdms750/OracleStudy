@@ -1,0 +1,3 @@
+-- 고객 테이블에서 
+SELECT * FROM gogek;
+SELECT * FROM gogek WHERE goaddr LIKE '서울%';

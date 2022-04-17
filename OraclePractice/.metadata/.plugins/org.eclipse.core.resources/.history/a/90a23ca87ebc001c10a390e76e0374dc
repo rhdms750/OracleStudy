@@ -1,0 +1,7 @@
+--[SYSDATE : 현재 시스템의 DATE]
+--*알아둘 점 : 시스템 설정에 따라서 시간이 나오지 않기도 함. 이럴 땐, SYSTIMESTAMP사용
+SELECT TO_CHAR(SYSDATE, 'RRRR-MM-DD HH24:MI:SS') "지금 시간"
+  FROM DUAL;
+
+SELECT TO_CHAR(SYSDATE, 'RRRR-MM-DD HH24:MI:SS') "하루 전 지금시간"
+  FROM DUAL;

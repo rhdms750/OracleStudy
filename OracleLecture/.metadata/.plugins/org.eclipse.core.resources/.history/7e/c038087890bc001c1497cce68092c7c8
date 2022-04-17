@@ -1,0 +1,11 @@
+/*
+
+  집(통)계 함수
+  1. COUNT(필드) : 도메인의 갯수를 구한다. (null은 포함하지 않는다.)
+     COUNT(*)   : 전체레코드 수 구하기
+  
+  SELECT COUNT(*), COUNT(samgr) FROM sawon;
+
+
+
+*/

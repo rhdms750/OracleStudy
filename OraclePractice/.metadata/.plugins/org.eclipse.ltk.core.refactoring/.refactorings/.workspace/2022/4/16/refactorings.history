@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;2022_04_14_연산자_변환함수&apos; to &apos;2022_0414_연산자_변환함수&apos;" description="Rename resource &apos;2022_04_14_연산자_변환함수&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/2022_04_14_연산자_변환함수" name="2022_0414_연산자_변환함수" stamp="1649999010018" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;2022_0414_연산자_변환함수&apos; to &apos;2022_0414_연산자&apos;" description="Rename resource &apos;2022_0414_연산자_변환함수&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/2022_0414_연산자_변환함수" name="2022_0414_연산자" stamp="1649999034007" updateReferences="true"/>
+</session>

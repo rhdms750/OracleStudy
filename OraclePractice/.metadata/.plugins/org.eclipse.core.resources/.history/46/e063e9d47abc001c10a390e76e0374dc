@@ -1,0 +1,13 @@
+--[CONCAT]
+SELECT CONCAT('www.','oracleclub') || '.com' name
+  FROM DUAL;
+  
+SELECT 
+  SANAME,
+  CONCAT(SANAME,'님 안녕하세요') AS HELLO
+  FROM SAWON;
+  
+--[INITCAP, LOWER, UPPER]
+--INITCAP : 첫글자를 대문자로, 나머지는 소문자로 변경
+SELECT INITCAP('oracleclub') name FROM DUAL;
+SELECT INITCAP('helloWorld') hello FROM DUAL;

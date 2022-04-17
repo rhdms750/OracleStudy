@@ -1,0 +1,13 @@
+-- 문자형 함수
+
+-- concat
+SELECT CONCAT('www.', 'oracleclub')||'.com' name FROM DUAL;
+
+-- 이클립스 대문자 변환 : ctrl + shfit + x
+
+-- INITCAP, LOWER, UPPER 예제
+SELECT INITCAP('oracleclub') name FROM DUAL
+ UNION ALL
+SELECT UPPER('oracleclub') name FROM DUAL
+ UNION ALL
+SELECT LOWER('oracleclub') name FROM DUAL;

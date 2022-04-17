@@ -1,0 +1,18 @@
+-- A테이블 ) userInfo3
+create table userInfo3
+(
+    idx       int,           
+    name      varchar2(100) not null,
+    id        varchar2(100) not null unique,
+    password  varchar2(100) not null,
+    eng       int           check(eng between 0 and 100),
+    mat       int           check(mat between 0 and 100)
+)
+
+alter table userInfo3 
+  add constraint pk_userInfo3_idx primary key(idx)
+
+insert into userInfo3 values(1, '김길동', 'kim1234', '1234', 88, 100);
+insert into userInfo3 values(2, '나길동', 'nah1234', '2345', 78, 90);
+insert into userInfo3 values(3, '다길동', 'dah1234', '2345', 98, 50);
+

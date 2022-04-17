@@ -1,0 +1,49 @@
+--[CONCAT(문자열,문자열)]
+SELECT CONCAT('www.','oracleclub') || '.com' name
+  FROM DUAL;
+  
+SELECT 
+  SANAME,
+  CONCAT(SANAME,'님 안녕하세요') AS HELLO
+  FROM SAWON;
+  
+--[INITCAP(문자열), LOWER(문자열), UPPER(문자열)]
+--INITCAP : 첫글자를 대문자로, 나머지는 소문자로 변경
+SELECT INITCAP('oracleclub') name FROM DUAL;
+SELECT INITCAP('helloWorld') hello FROM DUAL;
+--LOWER : 모든 문자를 소문자로 변경
+SELECT LOWER('ORACLEclub') name FROM DUAL;
+--UPPER : 모든 문자를 대문자로 변경
+SELECT UPPER('ORACCLEclub') name FROM DUAL;
+
+--[SUBSTR(문자열,시작인덱스,갯수)] 
+--시작 인덱스부터 시작해서 갯수만큼 반환
+SELECT 
+  SUBSTR('HELLO_WORLD',7) AS SUBSTR1,
+  SUBSTR('HELLO_WORLD',7,3) AS SBSTR2
+FROM DUAL
+
+--[LENGTH(문자열)]
+--문자열의 길이를 반환한다.
+SELECT
+  LENGTH('DBQUERY') AS LEN
+FROM DUAL;
+
+SELECT 
+  SANAME,
+  LENGTH(SANAME) AS NAME
+FROM SAWON;
+
+--[REPLACE(전체문자열,대채할 문자열, 대체문자열)]
+SELECT
+  REPLACE('ORACLE_STUDY','STUDY','LEARNING') AS REP
+FROM DUAL;
+
+SELECT
+  REPLACE('LOVEISBLINE','IS',' IS ') AS LOVE
+FROM DUAL;
+
+--[INSTR(문자열,찾을문자열)]
+SELECT INSTR('CORPORATE FLOOR','OK') idx FROM DUAL; -- 없으면 O
+SELECT INSTR('COPORATE FLOOR','FLOOR') idx FROM DUAL; -- 10
+SELECT INSTR('CORPORATE FLOOR','OR',3) idx FROM DUAL; 

@@ -1,0 +1,6 @@
+--[CONCAT]
+SELECT CONCAT('www.','oracleclub') || '.com' name
+  FROM DUAL;
+  
+SELECT CONCAT(SANAME,'¥‘ æ»≥Á«œººø‰') AS HELLO
+  FROM SAWON;

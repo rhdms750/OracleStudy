@@ -1,0 +1,20 @@
+--[SYSDATE : 현재 시스템의 일자와 시간] *최소 단위 1초
+SELECT TO_CHAR(SYSDATE, 'RRRR-MM-DD HH24:MI:SS') "지금 시간"
+  FROM DUAL;
+
+              -- '일' 을 기준으로 - + 가능
+SELECT TO_CHAR(SYSDATE-1, 'RRRR-MM-DD HH24:MI:SS') "하루 전 지금시간"
+  FROM DUAL;
+
+               -- 하루를 24시간으로 나누면 1시간
+SELECT TO_CHAR(SYSDATE-1/24, 'RRRR-MM-DD HH24:MI:SS') "1시간 전 시간"
+  FROM DUAL;
+  
+SELECT TO_CHAR(SYSDATE-1/24/60, 'RRRR-MM-DD HH24:MI:SS') "1분 전"
+  FROM DUAL;
+  
+SELECT TO_CHAR(SYSDATE-1/24/60/60, 'RRRR-MM-DD HH24:MI:SS') "1초 전"
+  FROM DUAL;
+  
+--[SYSTIMESTAMP : 현재 시스템의 일자와 시간] *최소 단위 10억분의 1초
+SELECT TO_CHAR(SYSTIMESTAMP, 'RRRR-MM-DD HH24:MI:SS.FF3') FROM DUAL

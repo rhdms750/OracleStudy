@@ -1,0 +1,19 @@
+create table scores
+(
+--변수명 자료형
+--//크기는 넉넉하게 준다.
+  name  varchar2(100), --byte단위 가변길이
+  kor   number(5),     --숫자의 길이 단위
+  eng   int, 
+  mat   number(5,1),
+  prev  char(4)         --byte단위 고정길이
+)
+
+insert into scores values('김길동',80,80.5,80.5,'A');
+insert into scores values('나길동',90,95,100,'B');
+insert into scores values('다길동',75,23,55,'C');
+
+select * from scores;
+
+drop table scores;
+

@@ -1,0 +1,90 @@
+[로컬서버와 이클립스를 연결하는 법]
+
+<오라클 XE 다운 받기>
+오라클 홈페이지에서 프로그램 다운
+https://misrover.tistory.com/114
+
+//////////////////////////////////////////////////////////////////
+<오라클 driver파일을 작업 프로젝트로 이동시키기>
+
+[1] 오라클's이클립스 연결 파일(driver) 경로로 이동
+C:\oraclexe\app\oracle\product\10.2.0\server\jdbc\lib
+
+[2] driver파일을 프로젝트 취상위 경로에 복사하여 이동
+ex. OracleStudy폴더에 이동
+
+/////////////////////////////////////////////////////////////////
+
+<DBO 임시 계정 하나 만들기>
+
+[1] 데이터베이스 로그인 후 HR(임시계정) 잠금 풀기
+localhost:8080/apex > 관리 > 데이터베이스 사용자 > 비밀번호(1234등 아무거나) > HR잠금 풀기 설정 후 확인
+
+[2] 로그아웃 후 HR로 로그인하여 객체 브라우저로 이동
+
+////////////////////////////////////////////////////////
+
+<이클립스에서 경로 설정>
+
+[1] perpective를 JavaEE로 설정
+*JDK 다운시, java SE로 다운받으면 이 설정X
+
+[2] 하단의 [Data Source Explorer] 탭 > [Database Connection] 폴더 선택 후 마우스 오른쪽 > new
+
+[3] [New Connection Profile] 윈도우창 설정 후 [NEXT]
+    - Connection Profile Types : Oracle 선택
+    - Name : Oracle_DBO이름 설정 *아무 이름이나 괜찮음. 한글도 상관 없음. ex) Oracle_hr
+
+[4] [New Connection Profile] 윈도우창에 테이블 나타남
+    - Drivers 셀렉박스 바로 옆 아이콘 선택, [New Driver Definition] 윈도우창으로 이동 
+
+[5] [New Driver Definition] 윈도우창에서 아래와 같이 설정 후 [OK]
+    - [Name/Type] Oracle Thin Driver의 나의 오라클 버전(10) 선택
+    - [JAR List] 현재 파일 맨 위의 [2]에서 옮긴 파일 경로로 경로 변경
+
+[6] [New Connection Profile]으로 재이동 후 Properties 작성 후 [Test Connection] 선택  
+                                                                                  --> Ping succeeded! 하면 정상연결된 것
+    - Service Name : xe ***항상 이렇게 써줘야
+    - Host : localhost
+    - User name : hr
+    - Password : 1234 *save password 체크
+
+//////////////////////////////////////////////////////////////////////////////////
+
+[AWS 서버와 이클립스 연결할 경우]
+*아마존에서 계정 생성한 후 URL/HOST/포트 정보 획득
+*보안 그룹 > 인바운드 규칙 편집 : 새 규칙 생성 
+ (유형(Oracle-RDS), 프로토콜(TCP), 포트 지정, 사용자는 Anywhere)
+ ---> 외부에서 접속 할 수 있게 허용하는 것
+
+[1] mvnrepository.com로 이동
+
+[2] 검색창에 ojdbc6 입력
+
+[3] Files안의 jar파일을 다운
+
+[4] 현재파일 가장 위 [2]와 동일하게 프로젝트 최상단에 파일 이동
+
+[5] [Data Source Explorer] 탭 > [Database Connection] > Oracle 설정 
+    - Name : Oracle_AWS_닉네임
+
+[6] [New Connection Profile] 
+    - [Name/Type] Oracle Thin Driver의 나의 오라클 버전(10) 선택
+    - [JAR List] 현재 파일 맨 위의 [2]에서 옮긴 파일 경로로 경로 변경
+    * 이미 등록된 드라이버라 할 경우, [Database Connection] 삼각형 아이콘 터치 > Driver수정 (다운받은 버전으로)
+
+[7] [Database Connection] 
+    - Serivce Name : DATABASE
+    - Host : 아마존에 등록한 RDS 엔드포인트
+    - 포트 : 아마존에 등록한 RDS 포트
+    - Username : 등록한 username
+    - Password : 등록한 비번 
+
+/////////////////////////////////////////////////////////////////////////////////
+
+>>> 모두 완료되면 Create Dynamic Web Project 선택
+
+/////////////////////////////////////////////////////////////////////////////////
+
+참조사이트
+gurubee.net 
