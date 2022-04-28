@@ -6,7 +6,8 @@ create user test1 identified by test1
 
 2. 권한 부여
 grant connect to test1       --- 연결 권한
-grant resource to test1      --- 자원(Table/View..) 생성 관리할 수 있는 권한
+grant resource to test1      --- 자원(Table) 생성 관리할 수 있는 권한
+grant create view to test1   --- 자원(View) 생성 관리할 수 있는 권한
 
 -- 위의 2개 명령을 한 번에 처리
 grant connect,resource to test1
