@@ -41,8 +41,26 @@ WHERE d.deptno = e.deptno;
    LSNRCTL>start     -- 리스너 시작
    LSNRCTL>stop      -- 리스터 중지
      
-     
-  
+SELECT * FROM dept;
+
+select * from sawon
+
+select * from gogek_view2
+
+SELECT 
+  v2.*,
+  TO_NUMBER(SUBSTR(GOJUMIN,3,2)) as birth_month,
+  TO_NUMBER(SUBSTR(GOJUMIN,5,2)) as birth_day
+FROM gogek_view v2 
+
+SELECT
+  TO_NUMBER(SUBSTR(GOJUMIN,3,2)) as birth_month,
+  TO_NUMBER(SUBSTR(GOJUMIN,5,2)) as birth_day
+FROM sawon s LEFT OUTER JOIN gogek_view2 v2 ON s.sabun = v2.godam 
+
+
+
+    
 */
 
 /*

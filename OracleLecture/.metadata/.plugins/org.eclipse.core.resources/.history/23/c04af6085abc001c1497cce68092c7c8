@@ -1,2 +1,0 @@
--- 문자형 함수
-SELECT CONCAT('www.', 'oracleclub')||'.com' name FROM DUAL;

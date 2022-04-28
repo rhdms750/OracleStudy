@@ -1,6 +1,0 @@
-create table userInfo
-(
-    name      varchar2(100) not null,
-    nickname  varchar2(100) null       
-)
-/
