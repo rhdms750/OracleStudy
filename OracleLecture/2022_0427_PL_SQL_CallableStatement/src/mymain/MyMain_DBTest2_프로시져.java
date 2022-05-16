@@ -3,8 +3,6 @@ package mymain;
 import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.Statement;
-//import oracle.jdbc.driver.OracleDriver;
 
 public class MyMain_DBTest2_프로시져 {
 	

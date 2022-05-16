@@ -93,5 +93,11 @@
     *실제 현장에서는 작업사항을 transaction에 올려두고, 여태까지 작업을 취소하거나 업데이트 할 수 있게 한다.
     drop table sungjuk;
   
+  create or replace view sawon_view_man
+  AS
+  select * 
+  from sawon where sasex = '남자'
+  
     
 */
+
